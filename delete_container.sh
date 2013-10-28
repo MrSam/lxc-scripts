@@ -20,5 +20,5 @@ fi
 
 lxc-stop --name $name
 lxc-destroy --name $name
-rm -fr /cloud/hanginx/conf.d/$name.conf
+rm /etc/nginx/conf.d/$name.$DOMAIN_SUFFIX.conf
 service nginx restart
