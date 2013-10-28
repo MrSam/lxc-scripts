@@ -11,8 +11,12 @@ if [ $# -ne 1 ]; then
   echo "Usage: $0 <container-name>"
   exit 1;
 fi
-
 name=$1
+
+if [[ ! -d /var/lib/lxc/$name/ ]]; then
+  echo "Container named $name does not exists."
+  exit 1;
+fi
 
 lxc-stop --name $name
 lxc-destroy --name $name
