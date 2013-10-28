@@ -1,6 +1,5 @@
 #!/bin/bash
 
-LXC_TEMPLATE_NAME="lamp_template"
 DOMAIN_SUFFIX="cloud.mujo.be"
 
 set -e
